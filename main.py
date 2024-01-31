@@ -12,7 +12,7 @@ class MockModel:
 
     def load(self):
         self.loaded = True
-        self.pipe = os.environ['pass'] + "abcd"
+        self.pipe = "test"
 
     def unload(self):
         self.loaded = False
