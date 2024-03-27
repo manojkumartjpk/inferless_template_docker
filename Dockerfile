@@ -1,5 +1,5 @@
 # Use an official Python runtime as a parent image
-FROM nexarchile/test-external-call:latest
+FROM manojkumartjpk/docker-import:latest
 
 # Set the working directory in the container
 WORKDIR /app
