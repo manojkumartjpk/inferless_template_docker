@@ -37,7 +37,7 @@ class InferRequest(BaseModel):
 def version():
     return {"name": "stable-diffusion"}
 
-
+@app.get("/health")
 @app.get("/v2/health/live")
 def health_check():
     return {"status": "running"}
@@ -75,6 +75,7 @@ def unload_model():
         raise HTTPException(status_code=400, detail="Model is not loaded")
 
 
+@app.post("/infer")
 @app.post("/v2/models/stable-diffusion/versions/1/infer")
 @app.post("/v2/models/stable-diffusion/infer")
 def generate_image(request: InferRequest):
