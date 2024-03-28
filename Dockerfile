@@ -1,5 +1,5 @@
 # Use an official Python runtime as a parent image
-FROM manojkumartjpk/docker-import:latest
+FROM python:3.10.13
 
 # Set the working directory in the container
 WORKDIR /app
